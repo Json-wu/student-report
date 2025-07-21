@@ -1,0 +1,407 @@
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f97316;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    /* 加载动画容器 - 覆盖整个视口 */
+    .loading-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+
+    /* 加载动画样式 */
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* 加载完成后隐藏 */
+    .loading-container.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      padding: auto;
+      width: 100%;
+      background-color: #f97316;
+      box-sizing: border-box;
+    }
+
+    .header {
+      text-align: center;
+    }
+
+    .headerbg {
+      width: 100%;
+    }
+
+    .fixed-image {
+      position: absolute;
+      padding: 2rem;
+      width: 100px;
+      height: auto;
+      z-index: 1000;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .section {
+      margin: 20px;
+      background-color: #fff;
+      color: #000;
+      padding: 15px;
+      margin-bottom: 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: 0.3rem solid #f2cc3a;
+    }
+
+    .section img {
+      width: 100%;
+    }
+
+    .student-section {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      margin: 20px;
+      background-color: #fff;
+      color: #000;
+      margin-bottom: 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: 0.3rem solid #f2cc3a;
+      box-sizing: border-box;
+    }
+
+    .student-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .student-level {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #d34040;
+    }
+
+    .student-left {
+      padding: 15px;
+    }
+
+    .student-level-text {
+      position: relative;
+      top: 49%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+    }
+
+    .student-right {
+      margin-left: auto;
+      height: auto;
+      width: 100px;
+      color: white;
+      font-weight: bold;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url('../images//levelbg.jpg')
+    }
+
+    .teacher-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      max-width: 500px;
+      font-family: Arial, sans-serif;
+      padding: 15px;
+      border-radius: 8px;
+      /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    }
+
+    .teacher-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .teacher-info {
+      flex: 1;
+    }
+
+    .teacher-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .teacher-details {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      /* 横向排列 */
+      gap: 20px;
+      /* 项与项之间的间距 */
+    }
+
+    .teacher-details li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 14px;
+      color: #666;
+      white-space: nowrap;
+      /* 防止换行 */
+    }
+
+    /* 为每个li设置不同颜色的小点 */
+    .teacher-details li:nth-child(1)::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #3498db;
+      /* 蓝色 */
+      font-size: 18px;
+    }
+
+    .teacher-details li:nth-child(2)::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #e74c3c;
+      /* 红色 */
+      font-size: 18px;
+    }
+
+    .teacher-details li:nth-child(3)::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #2ecc71;
+      /* 绿色 */
+      font-size: 18px;
+    }
+
+    .radar-chart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .imgcls {
+      width: 100%;
+      height: auto;
+    }
+
+
+    .section-title {
+      margin-top: -2rem;
+      text-align: center;
+      padding: 6px 20px;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url('../images/sectionTitle.png');
+    }
+
+    .circle {
+      padding: 0 5px;
+      width: 2rem;
+      height: 2rem;
+      /* 圆的高度，需与宽度相等 */
+      background-color: #FFA500;
+      /* 橙色背景 */
+      border-radius: 50%;
+      /* 使 div 变成圆形 */
+      display: flex;
+      /* 使用 Flexbox 居中文字 */
+      justify-content: center;
+      /* 水平居中 */
+      align-items: center;
+      /* 垂直居中 */
+      color: white;
+      /* 文字颜色，可根据需要调整 */
+      font-weight: bold;
+      /* 文字加粗，可选 */
+    }
+
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .radar-labels {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+    }
+
+    .radar-label {
+      font-size: 0.8rem;
+      position: absolute;
+    }
+
+    .radar-label:nth-child(1) {
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .radar-label:nth-child(2) {
+      top: 20%;
+      left: 80%;
+    }
+
+    .radar-label:nth-child(3) {
+      top: 50%;
+      left: 90%;
+      transform: translateX(-50%);
+    }
+
+    .radar-label:nth-child(4) {
+      top: 80%;
+      left: 80%;
+    }
+
+    .radar-label:nth-child(5) {
+      top: 95%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .level-indicator {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .comment {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .remark {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      background-color: #e6ab83;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .numbered-section {
+      display: flex;
+      flex-direction: row;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #fff;
+      color: #000;
+      border-radius: 5px;
+      gap: 10px
+    }
+
+    .numbered-title {
+      font-weight: bold;
+      color: #f97316;
+      margin-bottom: 5px;
+    }
+
+    .placeholder {
+      background-color: #e0e0e0;
+      height: 100px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 600px;
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .section {
+        padding: 20px;
+      }
+
+      .comment {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        margin-top: -2.2rem;
+      }
+
+      .circle {
+        padding: 0;
+      }
+    }

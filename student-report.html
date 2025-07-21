@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Assessment Report</title>
+  <script src="./assets/js/script.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="./assets/images/logo.png" alt="Fixed Image" class="fixed-image">
+      <img src="./assets/images/header.jpg" alt="Hellokid Logo" class="headerbg">
+    </div>
+
+    <div class="student-section">
+      <div class="student-left">
+        <div class="student-name">
+          学生：<span id="student-name"></span>
+        </div>
+        <div class="student-level">
+          The comprehensive level test is
+        </div>
+      </div>
+      <div class="student-right">
+        <span class="student-level-text"></span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">综合能力评价</div>
+      <div class="radar-chart">
+        <image src="./assets/images/abilityA.png" alt="Hellokid Logo">
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">外教评语</div>
+      <div class="teacher-card">
+        <!-- 左侧头像 -->
+        <div class="teacher-avatar">头像</div>
+        
+        <!-- 右侧信息 -->
+        <div class="teacher-info">
+            <div class="teacher-name"></div>
+            <ul class="teacher-details">
+                <li id="teacher-age"></li>
+                <li id="teacher-edu"></li>
+                <li id="teacher-cert"></li>
+            </ul>
+        </div>
+    </div>
+      <div class="comment engagement">
+        
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">学习建议</div>
+      <div class="comment" id="suggestion">
+        
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">当前级别</div>
+      <div class="comment">
+        <image class="imgcls levelBg" src="./assets/images/level1.jpg" />
+      </div>
+      <div class="remark">
+        本级别涉及17个主题，孩子跟随Capt.一起学习动作，身体部位，家人感觉，动物，食物，玩具，衣服，天气，乐园，形状等相关词汇表达。
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">阶段成果展示</div>
+      <div class="numbered-section">
+        <div class="circle">01</div>
+        <div>熟悉165个词汇通过主题单元认识不同类别的单词，如动作、动物等。</div>
+      </div>
+      <div class="numbered-section">
+        <div class="circle">02</div>
+        <div>掌握96个日常生活句型在真实情境中学习生活对话和句型，采用沉浸式方法。</div>
+      </div>
+      <div class="numbered-section">
+        <div class="circle">03</div>
+        <div>理解47个课堂用语能够听懂简易指令并做出正确回应。</div>
+      </div>
+      <div class="numbered-section">
+        <div class="circle">04</div>
+        <div>学习打招呼、自我介绍等基本表达。</div>
+      </div>
+      <div class="numbered-section">
+        <div class="circle">05</div>
+        <div>初步培养逻辑思维通过分类、拼图等活动提升分析能力。</div>
+      </div>
+      <div class="remark">
+        经过本阶段的学习，孩子可以听懂简单的关于动作、食物、颜色、动物、玩具等的表达和常用课堂指令，可以用单词和简单短语回答问题，开始养成使用英语的习惯，并且在潜移默化中提高了语言、知识、思维和综合能力。
+      </div>
+    </div>
+  </div>
+
+  <!-- 加载动画 -->
+  <div class="loading-container" id="loading">
+    <div class="loading-spinner"></div>
+  </div>
+</body>
+
+</html>
